@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "/index.js"
     }
-  ]
+  ],
+  "env": {
+    "VITE_MONGO_URI": "@vite_mongo_uri"
+  }
 }
