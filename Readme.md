@@ -48,4 +48,4 @@ The **Hotel Menu Order App** is a full-stack web application designed to streaml
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Hotel_Menu_Order_App.git
-   cd Hotel_Menu_Order_App
+   cd Hotel_Menu_Order_App 
