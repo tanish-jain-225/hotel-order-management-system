@@ -12,6 +12,7 @@ const OrderHistory = () => {
     const fetchOrderHistory = async () => {
       try {
         const sessionId = localStorage.getItem("sessionId"); // Retrieve sessionId from localStorage
+        console.log("Using sessionId:", sessionId); // Debugging sessionId
 
         if (!sessionId) {
           throw new Error("Session ID is missing. Please log in again.");

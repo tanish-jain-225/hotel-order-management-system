@@ -49,6 +49,7 @@ const Menu = () => {
   // Handle Order Button Click
   const handleOrder = async (item) => {
     try {
+      console.log("Using sessionId:", sessionId); // Debugging sessionId
       const response = await fetch(`${API_URL}/order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
