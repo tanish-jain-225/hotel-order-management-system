@@ -10,7 +10,6 @@ const AllOrders = () => {
   // Handle Order Done
   const handleOrderDone = async (order) => {
     try {
-      console.log("Order being processed:", order); // Debugging
   
       if (!order || !order._id || !order.customer || !order.items) {
         setError("Invalid order data. Please try again.");
@@ -46,8 +45,6 @@ const AllOrders = () => {
   
       // Update UI: Remove order from list
       setOrders((prevOrders) => prevOrders.filter((o) => o._id !== order._id));
-  
-      console.log("Order moved to history and deleted from active orders");
     } catch (err) {
       console.error(err.message);
       setError(err.message);

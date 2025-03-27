@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_URL = `http://localhost:5000`;
+const API_URL = import.meta.env.VITE_API_URL;
 
 const OrderHistory = () => {
   const [orders, setOrders] = useState([]);
@@ -12,7 +12,6 @@ const OrderHistory = () => {
     const fetchOrderHistory = async () => {
       try {
         const sessionId = localStorage.getItem("sessionId"); // Retrieve sessionId from localStorage
-        console.log("Using sessionId:", sessionId); // Debugging sessionId
 
         if (!sessionId) {
           throw new Error("Session ID is missing. Please log in again.");
@@ -90,7 +89,6 @@ const OrderHistory = () => {
         }
       );
 
-      console.log(response);
 
       if (!response.ok) {
         throw new Error("Failed to clear order history on the server.");
