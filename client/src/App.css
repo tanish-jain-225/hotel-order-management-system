@@ -1,0 +1,11 @@
+*{
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select {
+  background: white;
+  outline: none;
+  border: 1px solid #ccc;
+}
