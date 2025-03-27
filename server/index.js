@@ -8,7 +8,7 @@ dotenv.config();
 
 // Constants
 const PORT = 5000;
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = process.env.VITE_MONGO_URI;
 const dbName = "hotelMenu";
 
 // Initialize Express app

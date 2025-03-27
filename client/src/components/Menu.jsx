@@ -9,7 +9,7 @@ const Menu = () => {
   const [cartCount, setCartCount] = useState(0); // Cart count state
   const [addedStatus, setAddedStatus] = useState({}); // Added Status for Each Item
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.VITE_API_URL;
 
   // Generate or retrieve a unique session ID
   const getSessionId = () => {

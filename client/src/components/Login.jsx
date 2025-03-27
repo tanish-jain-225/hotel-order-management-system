@@ -33,7 +33,7 @@ const Login = () => {
   const [flashType, setFlashType] = useState("error");
   const navigate = useNavigate();
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.VITE_API_URL;
 
   // Fetch admin credentials
   useEffect(() => {

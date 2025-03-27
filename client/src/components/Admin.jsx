@@ -52,7 +52,7 @@ const Admin = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSection, setSelectedSection] = useState("All");
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.VITE_API_URL;
 
   // Fetch Menu Items
   const fetchMenuItems = useCallback(async () => {

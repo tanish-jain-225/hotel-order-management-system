@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = process.env.VITE_API_URL;
 
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
