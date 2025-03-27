@@ -13,6 +13,7 @@
     }
   ],
   "env": {
-    "VITE_MONGO_URI": "@vite_mongo_uri"
+    "VITE_MONGO_URI": "@vite_mongo_uri",
+    "FRONTEND_URL": "https://hotel-order-management-system.vercel.app" // Add frontend URL
   }
 }

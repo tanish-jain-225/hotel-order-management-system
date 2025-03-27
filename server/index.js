@@ -13,7 +13,11 @@ const dbName = "hotelMenu";
 
 // Initialize Express app
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*", // Allow frontend URL or all origins
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 app.use(express.json());
 
 // MongoDB client and database reference
@@ -126,6 +130,7 @@ app.delete("/", async (req, res) => {
 app.post("/order", async (req, res) => {
   try {
     const { sessionId, name, price, quantity, image, cuisine, section } = req.body;
+    console.log("Received sessionId:", sessionId); // Debugging sessionId
 
     if (!sessionId || !name || !price || !quantity) {
       return res.status(400).json({ message: "Session ID, name, price, and quantity are required." });
@@ -149,6 +154,7 @@ app.post("/order", async (req, res) => {
 app.get("/orders", async (req, res) => {
   try {
     const sessionId = req.query.sessionId;
+    console.log("Fetching orders for sessionId:", sessionId); // Debugging sessionId
 
     if (!sessionId) {
       return res.status(400).json({ message: "Session ID is required." });
