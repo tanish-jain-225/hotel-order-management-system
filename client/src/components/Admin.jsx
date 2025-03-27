@@ -52,7 +52,7 @@ const Admin = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSection, setSelectedSection] = useState("All");
 
-  const API_URL = process.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Fetch Menu Items
   const fetchMenuItems = useCallback(async () => {

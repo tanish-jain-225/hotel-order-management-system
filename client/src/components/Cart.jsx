@@ -15,7 +15,7 @@ const Cart = () => {
   const [flashType, setFlashType] = useState("");
   const [currentOrders, setCurrentOrders] = useState([]); // State to store all current orders
 
-  const API_URL = process.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
   const GST_RATE = 0.05; // 5% GST
 
   // Generate or retrieve a unique session ID
